@@ -1,14 +1,15 @@
 // SoloLuck HTTPS poller (sololuck.io).
 //
 // SoloLuck is a 0%-fee true-solo pool running a patched ckpool core,
-// hosted in Jakarta. The HTTP API is path-compatible with upstream solo
-// ckpool — `/users/<address>` returns JSON with the same `hashrate1m`
-// SI-suffixed string — so the shared ckpool-family parser handles it
-// unchanged.
+// with its own Bitcoin node in Jakarta and another in Phoenix. The HTTP
+// API is path-compatible with upstream solo ckpool — `/users/<address>`
+// returns JSON with the same `hashrate1m` SI-suffixed string — so the
+// shared ckpool-family parser handles it unchanged.
 //
-// Unlike ckpool.org and NerdMiner Pool there are no regional mirrors,
-// so this needs no `base_url()` virtual and no base class — one host,
-// one id.
+// The STRATUM endpoints are regional, but the HTTP API is not: every
+// region reports through the single sololuck.io host, so unlike
+// ckpool.org and NerdMiner Pool this still needs no `base_url()`
+// virtual and no base class — one API host, one id.
 //
 // Solo pool: hashrate only, never a per-user daily payout.
 //
