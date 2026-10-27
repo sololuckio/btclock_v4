@@ -1,7 +1,7 @@
 // SoloLuck HTTPS poller (sololuck.io).
 //
 // SoloLuck is a 0%-fee true-solo pool running a patched ckpool core,
-// with its own Bitcoin node in Jakarta and another in Phoenix. The HTTP
+// with its own Bitcoin node in Jakarta. The HTTP
 // API is path-compatible with upstream solo ckpool — `/users/<address>`
 // returns JSON with the same `hashrate1m` SI-suffixed string — so the
 // shared ckpool-family parser handles it unchanged.
